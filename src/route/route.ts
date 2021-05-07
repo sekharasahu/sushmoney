@@ -9,6 +9,7 @@ router.get('/', (req: Request, res : Response)=>{
 
 router.post('/user', UserController.createUser);
 router.get('/user', UserController.getUser);
+router.put('/user', UserController.deleteUser);
 
 
 

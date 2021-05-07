@@ -6,7 +6,7 @@ describe('User API test', () => {
         try {
             let result = await axios({
                 method: 'post',
-                url: 'http://localhost:300/api/user',
+                url: 'http://localhost:3000/api/user',
                 data: {
                     firstName: "Sekhar Suman",
                     lastName: "Sahu",
@@ -22,7 +22,7 @@ describe('User API test', () => {
 
     it('GET user API', async () => {
         try {
-            let result = await axios.get('http://localhost:300/api/user');
+            let result = await axios.get('http://localhost:3000/api/user');
             expect(result.data.length).to.be.greaterThan(0);
         } catch (err) {
             console.log(err);
@@ -34,7 +34,7 @@ describe('User API test', () => {
         try {
             let result = await axios({
                 method: 'put',
-                url: 'http://localhost:300/api/user'
+                url: 'http://localhost:3000/api/user'
             });
             expect(result.status).to.be.eq(200);
         } catch (err) {
